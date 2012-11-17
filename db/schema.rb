@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121117174129) do
+ActiveRecord::Schema.define(:version => 20121117175745) do
 
   create_table "guide_items", :force => true do |t|
     t.string   "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20121117174129) do
     t.datetime "updated_at",    :null => false
     t.string   "ancestry"
     t.integer  "guide_item_id"
+    t.text     "answer"
   end
 
   add_index "questions", ["ancestry"], :name => "index_questions_on_ancestry"
