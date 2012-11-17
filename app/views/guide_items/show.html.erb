@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @guide_item.title %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @guide_item.author %>
+</p>
+
+
+<%= link_to 'Edit', edit_guide_item_path(@guide_item) %> |
+<%= link_to 'Back', guide_items_path %>

@@ -1,0 +1,29 @@
+<%= form_for(@guide_item) do |f| %>
+  <% if @guide_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@guide_item.errors.count, "error") %> prohibited this guide_item from being saved:</h2>
+
+      <ul>
+      <% @guide_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+    <%= f.text_field :tag_list %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
