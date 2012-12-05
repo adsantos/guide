@@ -1,4 +1,8 @@
-<h1>Listing guide_items</h1>
+<center><h1>Guides</h1></center>
+
+<%= link_to new_guide_item_path, class:"btn" do %>
+  <i class="icon-plus"></i> New guide
+<% end %>
 
 <div id="tag_cloud">
   <% tag_cloud GuideItem.tag_counts, %w[s m l] do |tag, css_class| %>
@@ -6,7 +10,8 @@
   <% end %>
 </div>
 
-<table>
+
+<table class="table table-striped">
   <tr>
     <th>Title</th>
     <th>Author</th>
@@ -30,4 +35,3 @@
 
 <br />
 
-<%= link_to 'New Guide item', new_guide_item_path %>
