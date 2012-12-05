@@ -33,6 +33,8 @@ GEM
     ancestry (1.3.0)
       activerecord (>= 2.3.14)
     arel (3.0.2)
+    bootstrap-sass (2.2.1.1)
+      sass (~> 3.2)
     builder (3.0.4)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -109,6 +111,7 @@ PLATFORMS
 DEPENDENCIES
   acts-as-taggable-on
   ancestry
+  bootstrap-sass (~> 2.2.1.1)
   coffee-rails (~> 3.2.1)
   jquery-rails
   rails (= 3.2.7)
