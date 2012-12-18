@@ -4,12 +4,9 @@
   <i class="icon-plus"></i> New guide
 <% end %>
 
-<div id="tag_cloud">
-  <% tag_cloud GuideItem.tag_counts, %w[s m l] do |tag, css_class| %>
-    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-  <% end %>
-</div>
-
+<br/>
+<br/>
+<br/>
 
 <table class="table table-striped">
   <tr>
@@ -34,4 +31,11 @@
 </table>
 
 <br />
+
+<ul class="tags">
+  <% tag_cloud GuideItem.tag_counts, %w[s m l] do |tag, css_class| %>
+    <li><%= link_to tag.name, tag_path(tag.name), class: css_class %></li>
+  <% end %>
+  <li><a href="">+</a></li>
+</ul>
 
